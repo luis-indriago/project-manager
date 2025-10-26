@@ -24,7 +24,7 @@
 import { ref } from 'vue'
 import { useAuthStore } from '../stores/auth'
 
-const form = ref({ email: 'luisindriago202@gmail.com', password: 'password' })
+const form = ref({ email: '', password: '' })
 const error = ref(null)
 const auth = useAuthStore()
 

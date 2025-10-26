@@ -22,8 +22,7 @@ export const useUserStore = defineStore('users', {
       try {
         const res = await api.get('/users', { params: { page, search } })
 
-        // ⬅️ accedemos un nivel más
-        this.users = res.data.data.data ?? [] // array de usuarios
+        this.users = res.data.data.data ?? []
         this.meta  = {
           current_page: res.data.data.current_page,
           last_page:    res.data.data.last_page,

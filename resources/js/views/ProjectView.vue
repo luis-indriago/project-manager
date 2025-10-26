@@ -2,7 +2,6 @@
   <Sidebar>
     <div class="p-6">
 
-      <!-- Modal reutilizable -->
       <Modal :show="showTaskModal" @close="showTaskModal = false">
         <h2 class="text-lg font-bold mb-4">
           {{ taskToEdit ? 'Editar tarea' : 'Crear tarea' }}
@@ -59,7 +58,6 @@
         </div>
       </div>
 
-      <!-- 3 columnas -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- PENDIENTES -->
         <Column
@@ -224,7 +222,6 @@ function openEditTask(task) {
 
 async function onTaskSaved() {
   showTaskModal.value = false
-  // recalcular columnas con la tarea nueva / modificada
   await reloadProject()
 }
 

@@ -33,7 +33,6 @@ const props = defineProps({
 
 const emit = defineEmits(['drop', 'deleteTask', 'editTask'])
 
-/* vuedraggable emite change:{added,removed,moved} */
 function onChange(evt) {
   if (evt.added) {
     const task = evt.added.element

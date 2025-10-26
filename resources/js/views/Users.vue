@@ -146,7 +146,6 @@ const showDeleteModal = ref(false)
 const selectedUser = ref(null)
 const editing = ref(false)
 
-/* carga inicial */
 onMounted(() => loadUsers())
 
 async function loadUsers() {

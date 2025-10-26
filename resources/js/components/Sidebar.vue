@@ -72,7 +72,6 @@ const router = useRouter()
 const route = useRoute()
 const auth = useAuthStore()
 
-/* ⬅️ calculado sobre datos reactivos que YA existen */
 const isAdmin = computed(() => auth.user?.roles?.some(r => r.name === 'admin') ?? false)
 
 const isActive = path => route.path.startsWith(path)

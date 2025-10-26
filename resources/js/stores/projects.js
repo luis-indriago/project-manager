@@ -100,12 +100,11 @@ export const useProjectStore = defineStore('projects', {
       try {
         await api.delete(`/tasks/${taskId}`)
 
-        // --- eliminar la tarea de cualquier proyecto que la tenga ---
         this.projects.forEach(p => {
           p.tasks = p.tasks.filter(t => t.id !== taskId)
         })
 
-        return taskId // útil si quieres confirmar
+        return taskId
       } catch (err) {
         throw err.response?.data?.message || 'Error al eliminar tarea'
       }

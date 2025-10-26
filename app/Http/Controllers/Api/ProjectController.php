@@ -15,7 +15,6 @@ class ProjectController extends Controller
         try {
             $user = $request->user();
 
-            // Si quieres admin ver todos, dev solo los propios
             $projects = $user->hasRole('admin')
             ? Project::with('tasks')->get()
             : Project::with('tasks')->where('user_id', $user->id)->get();

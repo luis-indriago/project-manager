@@ -5,13 +5,11 @@
         v-if="show"
         class="fixed inset-0 z-50 flex items-center justify-center"
       >
-        <!-- Fondo oscuro -->
         <div
           class="absolute inset-0 bg-black opacity-50"
           @click="close"
         ></div>
 
-        <!-- Contenedor del modal -->
         <div
           class="relative bg-white rounded-lg shadow-lg w-full max-w-lg p-6 z-10"
         >
@@ -22,7 +20,6 @@
             ✕
           </button>
 
-          <!-- Contenido dinámico -->
           <slot />
         </div>
       </div>

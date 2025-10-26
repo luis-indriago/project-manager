@@ -10,7 +10,6 @@ const app = createApp(App)
 
 app.use(pinia)
 
-/* ⬅️ re-hidratar ANTES de que exista cualquier componente */
 const auth = useAuthStore()
 auth.initAuth()
 

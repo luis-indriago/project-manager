@@ -36,11 +36,10 @@ const router = createRouter({
 })
 
 router.beforeEach((to, _, next) => {
-  const auth = useAuthStore() // Pinia sigue vivo
+  const auth = useAuthStore()
   const publicPages = ['/login', '/register']
   const needsAuth   = !publicPages.includes(to.path)
 
-  // comprobamos el token que ESTÁ en localStorage (sin await)
   const token = localStorage.getItem('token')
 
   if (needsAuth && !token) {

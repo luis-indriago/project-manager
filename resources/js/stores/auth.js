@@ -10,7 +10,6 @@ export const useAuthStore = defineStore('auth', {
   }),
 
   actions: {
-    /* Se llama UNA vez al arrancar la aplicación */
     initAuth() {
       const raw = localStorage.getItem('user')
       const tkn = localStorage.getItem('token')
