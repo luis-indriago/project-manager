@@ -33,7 +33,7 @@ Asegúrate de tener instalado:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/tu-repositorio.git
+   git clone https://github.com/luis-indriago/project-manager
    cd backend
    ```
 
